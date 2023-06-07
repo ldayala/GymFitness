@@ -8,3 +8,11 @@ function gymfitness_menu(){
 }
 //'init' cuando inicie wordpress agrege la funcion _menu . De esta forma es que se llaman las funciones
 add_action('init','gymfitness_menu');  
+
+//agergar hojas de estilo css y nuestros script javascript
+function gymfitness_script_style()
+{
+    wp_enqueue_style('style',get_stylesheet_uri(),array(),'1.0.0');
+}
+
+add_action('wp_enqueue_scripts','gymfitness_script_style');
