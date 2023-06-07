@@ -7,11 +7,16 @@ while (have_posts()): the_post();  //utilizando esta funcion vamos tenes acceso 
 endwhile
 
 echo get_template_directory_uri()  //ubicacion del directorio raiz del tema
+ wp_nav_menu('menu_principal') mostrar menu una vez creado dentro del function
 
 
 
 ---functions--
 creamos una funcion y par que funciones tenemos que agregarla con add_action(para gregar codif) o add_filter(para modificar la informacion)
 
+
 ----plugin ---
 disable gutember
+
+base datos
+los menus estan en la tabla wp_terms

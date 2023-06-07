@@ -12,13 +12,16 @@
     <header>
         <div class="contenedor barra-navegacion">
             <div class="logo">
-        <img src="<? echo get_template_directory_uri()?>/img/logo.svg" alt="" srcset="">
+                <img src="<? echo get_template_directory_uri() ?>/img/logo.svg" alt="" srcset="">
             </div>
-            <nav>
-                <a href="/Nosotros">Nosotros</a>
-                <a href="/Contacto">Contacto</a>
-                <a href="/Blog">Blog</a>
-            </nav>
+            <?php 
+            $arg=array(
+                'theme_location'=>'menu_principal',
+                'container'=>'nav',  //contenedor del menu html
+                'container_class'=>'menu_principal' //calse que queremos que tenga el menu
+            );
+            wp_nav_menu($arg);
+            ?>
         </div>
     </header>
     <?php
