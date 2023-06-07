@@ -1,0 +1,17 @@
+En wordpress tanto las entradas como las páginas son conosidas como post
+Dentro de Ajustes>Lectura podemos asignar las paginas de inicio y entrada
+
+while (have_posts()): the_post();  //utilizando esta funcion vamos tenes acceso a los contenidos de los post
+ the_time();  //ejemplo de post
+ the_content();
+endwhile
+
+echo get_template_directory_uri()  //ubicacion del directorio raiz del tema
+
+
+
+---functions--
+creamos una funcion y par que funciones tenemos que agregarla con add_action(para gregar codif) o add_filter(para modificar la informacion)
+
+----plugin ---
+disable gutember
