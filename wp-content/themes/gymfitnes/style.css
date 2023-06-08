@@ -15,7 +15,107 @@ Text Domain: gymfitness
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&family=Staatliches&display=swap');
+/*
+font-family: 
+font-family: 'Staatliches', cursive;
 
+*/
+:root{
+    --fuente-principal:'Raleway', sans-serif;
+    --fuente-heading:'Staatliches', cursive;
+    /*-----colores------*/
+    --primario:#ff5b00;
+    --gris-oscuro:#2f2e2e;
+    --gris-claro:#EBEBEB;
+    --blanco:#000;
+}
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;  /*convierte un pixel en un rem*/
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
 body{
-    background: blue;
+    font-family: var(--fuente-principal);
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+/*-------heading---------*/
+h1,h2,h3,h4{
+    font-family: var(--fuente-heading);
+    margin:0 0 5rem 0;
+    line-height: 1.2rem;
+}
+
+h1{
+    font-size: 6rem;
+}
+h2{font-size: 4.8rem;}
+
+h3{
+    font-size: 3.6rem;
+}
+h4{
+    font-size: 2.4rem;
+}
+
+/*global*/
+p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.contenedor{
+    width: min(95%,120rem);
+    margin: 0 auto;
+}
+
+/** utilidades **/
+.texto-primary{
+    color:var(--primario)
+}
+.texto-center{
+    text-align: center;
+}
+.texto-blanco{
+    color: var(--blanco);
+}
+.seccion{
+    padding: 5rem 0;;
+}
+
+/*****header***/
+.header{
+    background-color: var(--gris-oscuro);
+    padding: 2rem 0;
+}
+.barra-navegacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media(min-width:768px){
+    .barra-navegacion{
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

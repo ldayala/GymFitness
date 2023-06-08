@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <div class="contenedor barra-navegacion">
             <div class="logo">
                 <img src="<? echo get_template_directory_uri() ?>/img/logo.svg" alt="" srcset="">
